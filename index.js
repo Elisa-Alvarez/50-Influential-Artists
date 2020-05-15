@@ -226,12 +226,12 @@ console.log(`${artists[8].name}`)
  * it will return `The artist at index 0 is Amedeo Modigliani`.
 */
 function getArtistByIndex(id, name) {
-    for(let i=0; i< artists.name; i++){
-      return `The artist at index ${artists[id].id} ${artists[id].name}`;
+    for(let i=0; i< artists.length; i++){
+      return `The artist at index ${artists[i].id} ${artists[i].name}`;
     }
-    console.log (getArtistByIndex(artists[5]))
+    
   }
-  
+  console.log (getArtistByIndex(artists[5]));
   /**
 
 
@@ -243,21 +243,28 @@ function getArtistByIndex(id, name) {
  * For example, if removeArtist is invoked with the data and the number 0,
  * it will remove Amedeo Modigliani from our dataset.
 */
-function removeArtist(/*code here*/) {
-    /* code here */
+function removeArtist(artists) {
+     
+ 
   }
-  
+  console.log(removeArtist(artists.shift(0)));
+  console.log(artists);
   /**
 
 
 /* Task 5: Create a function called lotsOfArt() that takes artists as an argument and returns an array with names of artists who painted more than 100 paintings */
 
-function lotsOfArt(/* Code here */){
-
-    /* Code here */
-
+function lotsOfArt(art){
+ const paint = [];
+    for(let i=0; i< artists.length; i++){
+      
+      if(artists[i].paintings > 100){
+        paint.push(artists[i].name);
+      }
+    }
+return paint
   }
-
+console.log(lotsOfArt(artists));
 
 /* Task 6: Create a function called `addArtist` that can accept an array of information and add it to the artists array. Then, Add a 21st artist to the array (you) with custom information! 👩‍🎨👨‍🎨
 
@@ -268,12 +275,21 @@ genre: Web Design,
 nationality: Your Nationality Here
 bio: Add 1-2 sentences (or use lorem ipsum) "*/
 
-function addArtist(/* Code here */){
-
-    /* Code here */
-
+function addArtist(artists){
+ 
+ artists.push( {
+    id: 25,
+    Name: 'Elisa',
+    years: 1995-2020,
+    genre: 'Web Design',
+    nationality: 'American',
+    bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
   }
+  );
+}
 
+addArtist(artists);
+console.log(artists);
 
 
 
